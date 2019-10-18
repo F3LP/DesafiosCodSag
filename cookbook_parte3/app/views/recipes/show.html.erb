@@ -1,0 +1,25 @@
+<p>
+  <strong>Título:</strong>
+  <%= @recipe.title %>
+</p>
+
+<p>
+  <strong>Tipo de receita:</strong>
+  <%= @recipe.recipe_type %>
+</p>
+
+<p>
+  <strong>Cozinha:</strong>
+  <%= @recipe.cuisine %>
+</p>
+
+<p>
+  <strong>Dificuldade:</strong>
+  <%= @recipe.difficulty %>
+</p>
+
+<p>
+  <strong>Tempo de preparo:</strong>
+  <%= @recipe.cook_time %>
+</p>
+<%= link_to 'Voltar', recipes_path %>

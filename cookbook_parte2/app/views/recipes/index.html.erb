@@ -1,0 +1,23 @@
+
+<h1>CookBook</h1>
+<p>aaBem-vindo ao maior livro de receitas online</p>
+
+<h2>Receitas</h2>
+
+    <% @recipes.each do |recipe| %>
+      <h1><%= recipe.title %></h1>
+      <ul>
+
+        <li><%= recipe.recipe_type %></li>
+        <li><%= recipe.cuisine %></li>
+        <li><%= recipe.difficulty %></li>
+        <li><%= recipe.cook_time %> minutos</li>
+        <%= link_to 'Detalhes', detalhes_recipe_path %>
+      </ul>
+
+    <% end %>
+
+
+<br>
+
+<%= link_to 'Nova Receita', new_recipe_path %>

@@ -1,5 +1,5 @@
 class HomeController < ActionController::Base
-  def welcome
-    render "/layouts/home"
+  def index
+
   end
 end

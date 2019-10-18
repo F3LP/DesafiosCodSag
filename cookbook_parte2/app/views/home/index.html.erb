@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>aaCookBook</h1>
+<p>Bem-vindo ao maior livro de receitas online</p>
+
+<h2>Receitas</h2>
+
+<table>
+  <thead>
+    <thead>
+      <tr>
+        <th>Título</th>
+        <th>Tipo de Receita</th>
+        <th>Cozinha</th>
+        <th>Dificuldade</th>
+        <th>Tempo de preparo</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+  <tbody>
+    <% @recipes.each do |recipe| %>
+      <tr>
+        <td><%= recipe.title %></td>
+        <td><%= recipe.recipe_type %></td>
+        <td><%= recipe.cuisine %></td>
+        <td><%= recipe.difficulty %></td>
+        <td><%= recipe.cook_time %></td>
+        <td><%= link_to 'Mostrar', recipe %></td>
+        <td><%= link_to 'Editar', edit_recipe_path(recipe) %></td>
+        <td><%= link_to 'Excluir', recipe, method: :delete, data: { confirm: 'Você tem  certeza?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nova Receita', new_recipe_path %>

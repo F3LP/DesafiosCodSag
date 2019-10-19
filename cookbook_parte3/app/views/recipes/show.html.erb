@@ -1,7 +1,8 @@
-<p>
-  <strong>Título:</strong>
-  <%= @recipe.title %>
-</p>
+
+
+<h1><%= @recipe.title %></h1>
+<h3>Detalhes</h3>
+
 
 <p>
   <strong>Tipo de receita:</strong>
@@ -20,6 +21,14 @@
 
 <p>
   <strong>Tempo de preparo:</strong>
-  <%= @recipe.cook_time %>
+  <%= @recipe.cook_time %> minutos
 </p>
-<%= link_to 'Voltar', recipes_path %>
+
+
+  <h3><strong>Ingredientes:</strong></h3>
+  <p><%= @recipe.ingredients %></p>
+
+
+  <h3><strong>Como Preparar:</strong></h3>
+  <p><%= @recipe.cook_method %></p>
+<%= link_to 'Voltar', root_path %>

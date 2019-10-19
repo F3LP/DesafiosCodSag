@@ -25,5 +25,15 @@
   <%= @recipe.cook_time %>
 </p>
 
+<p>
+  <strong>Ingredientes:</strong>
+  <%= @recipe.ingredients %>
+</p>
+
+<p>
+  <strong>Modo de preparp:</strong>
+  <%= @recipe.cook_method %>
+</p>
+
 <%= link_to 'Editar', edit_recipe_path(@recipe) %> |
 <%= link_to 'Voltar', recipes_path %>

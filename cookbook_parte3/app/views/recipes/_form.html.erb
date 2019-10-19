@@ -36,8 +36,18 @@
     <%= form.number_field :cook_time %>
   </div>
 
+  <div class="field">
+    <%= form.label "Ingredientes" %>
+    <%= form.text_field :ingredients %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Como preparar" %>
+    <%= form.text_field :cook_method %>
+  </div>
+
   <div class="actions">
-    <%= form.submit "Salvar" %>
+    <%= form.submit "Enviar" %>
 
   </div>
 <% end %>

@@ -1,0 +1,20 @@
+<%= form_with(model: recipe_type, local: true) do |form| %>
+  <% if recipe_type.errors.any? %>
+    <div id="error_explanation">
+      <ul>
+      <% recipe_type.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name, 'Tipo da Receita' %>
+    <%= form.text_field :name,  id: 'Nome'%>
+  </div>
+
+  <div class="actions">
+    <%= form.submit 'Enviar' %>
+  </div>
+<% end %>

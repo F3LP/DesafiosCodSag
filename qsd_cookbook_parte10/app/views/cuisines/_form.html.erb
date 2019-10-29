@@ -1,0 +1,21 @@
+<%= form_with(model: cuisine, local: true) do |form| %>
+  <% if cuisine.errors.any? %>
+    <div id="error_explanation">
+      <ul>
+      <% cuisine.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name, 'Nome' %>
+    <%= form.text_field :name,  id: 'Nome' %>
+  </div>
+
+  <div class="actions">
+
+    <%= form.submit 'Enviar' %>
+  </div>
+<% end %>
